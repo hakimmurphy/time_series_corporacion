@@ -1,4 +1,4 @@
-# Corporación Favorita Grocery Sales Forecasting - Guayas (Part 1)
+# Corporación Favorita Grocery Sales Forecasting - Guayas
 
 This project focuses on preparing and exploring grocery sales data for the Guayas state, as part of a larger sales forecasting project.
 
