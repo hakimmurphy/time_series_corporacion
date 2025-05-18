@@ -1,6 +1,10 @@
-# Corporación Favorita Grocery Sales Forecasting - Guayas
+# 🛒 Corporación Favorita Grocery Sales Forecasting – Guayas
 
-This project focuses on preparing and exploring grocery sales data for the Guayas state, as part of a larger sales forecasting project.
+**Live app:** <https://forecasterapp-re6sa3sspcdsceht7piq9s.streamlit.app/>  
+**GitHub repo:** <https://github.com/hakimmurphy/forecaster_app>
+
+This multi-part project explores and forecasts grocery sales in Ecuador’s Guayas province.  
+Each notebook adds new capability: rigorous data prep (Part 1), first ML/DL models (Part 2), deeper diagnostics & feature ideas (Part 3), and advanced hyper-tuned modelling (Part 4).
 
 ## ✅ Part 1 – Data Preparation & Exploratory Analysis  
 
@@ -71,7 +75,3 @@ This foundation supports every later model.
 | Environment | Jupyter / Google Colab • Streamlit for interactive app |
 
 ---
-
-
-This multi-part project explores and forecasts grocery sales in Ecuador’s Guayas province.  
-Each notebook adds new capability: rigorous data prep (Part 1), first ML/DL models (Part 2), deeper diagnostics & feature ideas (Part 3), and advanced modelling (Part 4).
