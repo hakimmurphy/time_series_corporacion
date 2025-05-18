@@ -39,7 +39,24 @@ This foundation supports every later model.
 | **Feature gaps discovered** | holiday lead/lag, on-promotion %, capacity-hit flags, perishable interactions | engineer these for Part 4 |
 | **Cross-validation advice** | use `TimeSeriesSplit(gap=7)` to avoid leakage | robust CV pipeline |
 
-*A full markdown summary with next-step checklist is appended to the notebook `Corporación_Favorita_Grocery_Guayas_Further_EDA.ipynb`.*
+--- 
+
+## 🚀 Part 4 – Hyper-parameter Tuning & Final Model Selection
+
+| Model | Tuned parameters | Hold-out RMSE | MAE |
+|-------|------------------|---------------|-----|
+| XGBoost (baseline) | default | 10 600 | 6 900 |
+| **XGBoost (tuned)** |  n_estimators = 750, max_depth = 6, eta = 0.05, subsample = 0.8, colsample = 0.9 | **8 900** | **5 600** |
+| LSTM (seq = 30) | 1× 64 units, dropout 0.2, epochs 30 | 9 400 | 6 100 |
+
+* XGBoost hyper-search with `TimeSeriesSplit(gap=7)` cut error ~16 % over baseline.  
+* Tuned XGBoost serialized (`XGBoost.pkl`) and wired into the Streamlit app.  
+* LSTM shows promise but needs more tuning/ensembling for peak-day accuracy.
+
+**Planned next steps**  
+1. Quantile forecasts for inventory safety-stock.  
+2. Blend XGBoost + LSTM for holiday peaks.  
+3. Compare against classical SARIMA benchmark for transparency.
 
 ---
 
@@ -55,13 +72,6 @@ This foundation supports every later model.
 
 ---
 
-### Next (Part 4 → XGBoost / LSTM Hypertuning)
-
-* Retrain XGBoost + new features  
-* Train LSTM with log-scaled target & weekly differencing   
-* Push best model into `streamlit` app, add forecast summary table + interactive chart.
-
----
 
 This multi-part project explores and forecasts grocery sales in Ecuador’s Guayas province.  
 Each notebook adds new capability: rigorous data prep (Part 1), first ML/DL models (Part 2), deeper diagnostics & feature ideas (Part 3), and advanced modelling (Part 4).
