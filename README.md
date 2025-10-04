@@ -75,3 +75,11 @@ This foundation supports every later model.
 | Environment | Jupyter / Google Colab • Streamlit for interactive app |
 
 ---
+
+## 📄 License
+MIT
+
+---
+
+## 🗣️ Author
+Hakim Murphy
